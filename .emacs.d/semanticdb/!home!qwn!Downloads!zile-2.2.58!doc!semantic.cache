@@ -1,0 +1,37 @@
+;; Object doc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "doc/"
+  :tables
+  (list
+    (semanticdb-table "Makefile.am"
+      :major-mode 'makefile-automake-mode
+      :tags 
+        '( ("info_TEXINFOS" variable (:default-value ("zile.texi")) nil [951 977])
+            ("ziledir" variable (:default-value ("$(datadir)/zile")) nil [978 1004])
+            ("zile_DATA" variable (:default-value ("AUTODOC" "FAQ" "HELP" "TUTORIAL" "dotzile.sample")) nil [1004 1091])
+            ("EXTRA_DIST" variable (:default-value ("FAQ" "TUTORIAL" "dotzile.sample" "dotzile.texi" "zlint" "zile.1.in" "mkdoc.c" "config.h")) nil [1092 1231])
+            ("man_MANS" variable (:default-value ("zile.1")) nil [1232 1250])
+            ("HELP" function (:arguments ("zile.info")) nil [1251 1352])
+            ("AUTODOCSRCS" variable (:default-value ("$(top_srcdir)/src/*.c")) nil [1353 1389])
+            ("AM_CFLAGS" variable (:default-value ("-I$(top_srcdir)" "-I$(top_srcdir)/lib" "-I$(top_srcdir)/src")) nil [1389 1457])
+            ("mkdoc" function (:arguments ("mkdoc.o")) nil [1458 1544])
+            ("mkdoc.o" function (:arguments ("mkdoc.c" "config.h" "$(top_srcdir)/src/tbl_funcs.h" "$(top_srcdir)/src/tbl_vars.h" "$(top_srcdir)/src/strrstr.c" "$(top_srcdir)/src/vasprintf.c" "$(top_srcdir)/src/zmalloc.c" "$(top_srcdir)/src/astr.c")) nil [1545 1856])
+            ("AUTODOC" function (:arguments ("$(AUTODOCSRCS)" "mkdoc$(EXEEXT_FOR_BUILD)")) nil [1857 1939])
+            ("zile.info" function (:arguments ("dotzile.texi")) nil [1940 1964])
+            ("dotzile.texi" function (:arguments ("dotzile.sample")) nil [1965 2159])
+            ("zile.1" function (:arguments ("zile.1.in")) nil [2160 2234])
+            ("all-local" function (:arguments ("HELP" "AUTODOC")) nil [2235 2259])
+            ("clean-local" function nil nil [2260 2336])
+            ("check-local" function nil nil [2337 2399]))          
+      :file "Makefile.am"
+      :pointmax 2399
+      :fsize 2398
+      :lastmodtime '(18451 17655 0 0)
+      :unmatched-syntax '((shell-command 2351 . 2398) (bol 2350 . 2350)))
+    (semanticdb-table "config.h"
+      :file "config.h"
+      :fsize 381
+      :lastmodtime '(18420 4440 0 0)))
+  :file "!home!qwn!Downloads!zile-2.2.58!doc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

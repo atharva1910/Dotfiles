@@ -1,0 +1,68 @@
+;; Object howdoi/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "howdoi/"
+  :tables
+  (list
+    (semanticdb-table "howdoi.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("argparse" include nil nil [287 302])
+            ("glob" include nil nil [303 314])
+            ("os" include nil nil [315 324])
+            ("random" include nil nil [325 338])
+            ("re" include nil nil [339 348])
+            ("requests" include nil nil [349 364])
+            ("requests_cache" include nil nil [365 386])
+            ("sys" include nil nil [387 397])
+            ("__version__" include nil nil [405 423])
+            ("pygments" include nil nil [425 455])
+            ("pygments.lexers" include nil nil [456 514])
+            ("pygments.formatters.terminal" include nil nil [515 573])
+            ("pygments.util" include nil nil [574 613])
+            ("pyquery" include nil nil [615 648])
+            ("requests.exceptions" include nil nil [649 696])
+            ("requests.exceptions" include nil nil [697 737])
+            ("if" code nil nil [775 1150])
+            ("if" code nil nil [1152 1423])
+            ("URL" code nil nil [1424 1476])
+            ("USER_AGENTS" variable nil nil [1478 2063])
+            ("ANSWER_HEADER" variable nil nil [2064 2108])
+            ("NO_ANSWER_MSG" variable nil nil [2109 2146])
+            ("XDG_CACHE_DIR" variable nil nil [2147 2275])
+            ("CACHE_DIR" variable nil nil [2276 2325])
+            ("CACHE_FILE" variable nil nil [2326 2443])
+            ("get_proxies" function nil nil [2446 2789])
+            ("_get_result" function (:arguments 
+              ( ("url" variable nil (reparse-symbol function_parameters) [2807 2810]))              ) nil [2791 3216])
+            ("_get_links" function (:arguments 
+              ( ("query" variable nil (reparse-symbol function_parameters) [3233 3238]))              ) nil [3218 3437])
+            ("get_link_at_pos" function (:arguments 
+              ( ("links" variable nil (reparse-symbol function_parameters) [3459 3464])
+                ("position" variable nil (reparse-symbol function_parameters) [3466 3474]))              ) nil [3439 3634])
+            ("_format_output" function (:arguments 
+              ( ("code" variable nil (reparse-symbol function_parameters) [3655 3659])
+                ("args" variable nil (reparse-symbol function_parameters) [3661 3665]))              ) nil [3636 4273])
+            ("_is_question" function (:arguments 
+              ( ("link" variable nil (reparse-symbol function_parameters) [4292 4296]))              ) nil [4275 4344])
+            ("_get_questions" function (:arguments 
+              ( ("links" variable nil (reparse-symbol function_parameters) [4365 4370]))              ) nil [4346 4431])
+            ("_get_answer" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [4449 4453])
+                ("links" variable nil (reparse-symbol function_parameters) [4455 4460]))              ) nil [4433 5596])
+            ("_get_instructions" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [5620 5624]))              ) nil [5598 6217])
+            ("_enable_cache" function nil nil [6219 6354])
+            ("_clear_cache" function nil nil [6356 6456])
+            ("howdoi" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [6469 6473]))              ) nil [6458 6737])
+            ("get_parser" function nil nil [6739 7837])
+            ("command_line_runner" function nil nil [7839 8496])
+            ("if" code nil nil [8498 8551]))          
+      :file "howdoi.py"
+      :pointmax 8551
+      :fsize 8550
+      :lastmodtime '(22619 58622 788117 308000)
+      :unmatched-syntax '((INDENT_BLOCK 3040 . 3216) (NEWLINE 3039 . 3040) (COLON 3038 . 3039) (TRY 2817 . 2820) (AS 3034 . 3036) (FROM 398 . 402) (PERIOD 403 . 404))))
+  :file "!home!qwn!Documents!howdoi!howdoi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,72 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "main.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("../include/classes.hpp" include nil nil [1 34])
+            ("../include/mainFunctions.hpp" include nil nil [35 74])
+            ("main" function (:type "int") nil [76 355]))          
+      :file "main.cc"
+      :pointmax 356
+      :fsize 355
+      :lastmodtime '(22593 44694 765214 332000)
+      :unmatched-syntax nil)
+    (semanticdb-table "classes.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("../include/classes.hpp" include nil nil [1 34])
+            ("split" function
+               (:parent "exeCmd"
+                :arguments 
+                  ( ("s" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56 70]))                  
+                :type "void")
+                nil [37 719])
+            ("exec" function
+               (:parent "exeCmd"
+                :type "void")
+                nil [721 1132])
+            ("path" function
+               (:parent "exeCmd"
+                :arguments 
+                  ( ("d" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1159 1174]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1134 1299]))          
+      :file "classes.cc"
+      :pointmax 1301
+      :fsize 1300
+      :lastmodtime '(22593 44707 481287 117000)
+      :unmatched-syntax nil)
+    (semanticdb-table "mainFunctions.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("../include/mainFunctions.hpp" include nil nil [1 40])
+            ("MAXARGS" variable (:constant-flag t) nil [49 56])
+            ("check_string" function
+               (:arguments 
+                  ( ("cmd" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79 95]))                  
+                :type "bool")
+                nil [61 198])
+            ("check_alias" function
+               (:arguments 
+                  ( ("cmd" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [225 241]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [201 962])
+            ("execute_pwd" function
+               (:arguments 
+                  ( ("c" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [989 1003]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [965 1200]))          
+      :file "mainFunctions.cc"
+      :pointmax 1201
+      :fsize 1200
+      :lastmodtime '(22593 44721 397368 505000)
+      :unmatched-syntax nil))
+  :file "!home!qwn!Documents!shell!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

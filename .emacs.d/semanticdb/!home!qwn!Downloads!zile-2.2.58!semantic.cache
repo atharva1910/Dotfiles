@@ -1,0 +1,19 @@
+;; Object zile-2.2.58/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "zile-2.2.58/"
+  :tables
+  (list
+    (semanticdb-table "Makefile.am"
+      :major-mode 'makefile-automake-mode
+      :tags 
+        '( ("SUBDIRS" variable (:default-value ("doc" "src")) nil [947 965])
+            ("EXTRA_DIST" variable (:default-value ("AUTHORS" "COPYING" "INSTALL" "NEWS" "README" "THANKS")) nil [966 1064])
+            ("release" function (:arguments ("distcheck")) nil [1065 1209]))          
+      :file "Makefile.am"
+      :pointmax 1209
+      :fsize 1208
+      :lastmodtime '(18451 17713 0 0)
+      :unmatched-syntax '((shell-command 1085 . 1208) (bol 1084 . 1084))))
+  :file "!home!qwn!Downloads!zile-2.2.58!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

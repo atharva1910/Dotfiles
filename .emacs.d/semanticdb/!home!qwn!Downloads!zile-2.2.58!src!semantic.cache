@@ -1,0 +1,178 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "main.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("assert.h" include (:system-flag t) nil [964 983])
+            ("ctype.h" include (:system-flag t) nil [984 1002])
+            ("limits.h" include (:system-flag t) nil [1003 1022])
+            ("locale.h" include (:system-flag t) nil [1023 1042])
+            ("stdarg.h" include (:system-flag t) nil [1043 1062])
+            ("stdio.h" include (:system-flag t) nil [1063 1081])
+            ("stdlib.h" include (:system-flag t) nil [1082 1101])
+            ("string.h" include (:system-flag t) nil [1102 1121])
+            ("getopt.h" include nil nil [1219 1238])
+            ("signal.h" include (:system-flag t) nil [1246 1265])
+            ("zile.h" include nil nil [1267 1284])
+            ("extern.h" include nil nil [1285 1304])
+            ("eval.h" include nil nil [1305 1322])
+            ("vars.h" include nil nil [1323 1340])
+            ("ZILE_VERSION_STRING" variable (:constant-flag t) nil [1350 1369])
+            ("ZILE_COPYRIGHT_STRING" variable (:constant-flag t) nil [1411 1432])
+            ("cur_wp" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("Window" type (:type "class") nil nil))
+                nil [1542 1581])
+            ("head_wp" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("Window" type (:type "class") nil nil))
+                nil [1542 1581])
+            ("cur_bp" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("Buffer" type (:type "class") nil nil))
+                nil [1634 1673])
+            ("head_bp" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("Buffer" type (:type "class") nil nil))
+                nil [1634 1673])
+            ("thisflag" variable
+               (:default-value "0"
+                :type "int")
+                nil [1706 1737])
+            ("lastflag" variable
+               (:default-value "0"
+                :type "int")
+                nil [1706 1737])
+            ("last_uniarg" variable
+               (:default-value "1"
+                :type "int")
+                nil [1781 1801])
+            ("loop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1821 1826]))                  
+                :type "void")
+                nil [1803 2364])
+            ("about_screen" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3204 3209]))                  
+                :type "void")
+                nil [3178 3410])
+            ("execute_functions" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("funcs" variable (:type ("list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3443 3454]))                  
+                :type "void")
+                nil [3412 3731])
+            ("setup_main_screen" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3764 3773]))                  
+                :type "void")
+                nil [3733 4630])
+            ("segv_sig_handler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [4662 4682])
+                    ("" variable (:type ("GCC_UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4672 4683]))                  
+                :type "void")
+                nil [4632 4819])
+            ("other_sig_handler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [4852 4872])
+                    ("" variable (:type ("GCC_UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4862 4873]))                  
+                :type "void")
+                nil [4821 4973])
+            ("signal_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5000 5005]))                  
+                :type "void")
+                nil [4975 5269])
+            ("longopts" variable
+               (:dereference 1
+                :default-value "{
+  {\"batch\", optional_argument, NULL, 'b'},
+  {\"help\", optional_argument, NULL, 'h'},
+  {\"funcall\", required_argument, NULL, 'f'},
+  {\"no-init-file\", optional_argument, NULL, 'q'},
+  {\"version\", optional_argument, NULL, 'v'},
+  {0, 0, 0, 0}
+}"
+                :type ("option" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5420 5691])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [5703 5712])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5713 5725]))                  
+                :type "int")
+                nil [5693 10010]))          
+      :file "main.c"
+      :pointmax 10049
+      :fsize 10048
+      :lastmodtime '(22597 36134 257545 228000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ZILE_VERSION_STRING" . 
+              ((string "\"GNU \"" 1370 . 1376) (symbol "PACKAGE_NAME" 1377 . 1389) (string "\" \"" 1390 . 1393) (symbol "VERSION" 1394 . 1401)))
+          ("ZILE_COPYRIGHT_STRING" . ((string "\"Copyright (C) 2008 Free Software Foundation, Inc.\"" 1437 . 1488)))
+          )
+)
+    (semanticdb-table "Makefile.am"
+      :major-mode 'makefile-automake-mode
+      :tags 
+        '( ("regex" variable nil nil [960 968])
+            ("regex" variable (:default-value ("regex.o")) nil [973 989])
+            ("TESTS" variable (:default-value ("astr" "$(top_srcdir)/src/zile-startup-test")) nil [996 1045])
+            ("check_PROGRAMS" variable (:default-value ("astr")) nil [1045 1067])
+            ("astr_CPPFLAGS" variable (:default-value ("-DTEST" "-DSRCPATH=\"\\\"$(top_srcdir)/src\\\"\"")) nil [1068 1125])
+            ("astr_LDADD" variable (:default-value ("zmalloc.o" "strrstr.o")) nil [1125 1158])
+            ("AM_CPPFLAGS" variable (:default-value ("-DPATH_DATA=\"\\\"$(pkgdatadir)\\\"\"")) nil [1159 1205])
+            ("bin_PROGRAMS" variable (:default-value ("zile")) nil [1206 1226])
+            ("zile_SOURCES" variable (:default-value ("list.c" "list.h" "astr.c" "astr.h" "vector.c" "vector.h" "zmalloc.c" "eval.c" "eval.h" "lists.c" "lists.h" "parser.c" "parser.h" "vars.c" "vars.h" "lisp.c" "basic.c" "bind.c" "buffer.c" "completion.c" "editfns.c" "extern.h" "file.c" "funcs.c" "glue.c" "help.c" "history.c" "keys.c" "killring.c" "line.c" "macro.c" "main.c" "marker.c" "minibuf.c" "point.c" "redisplay.c" "registers.c" "search.c" "tbl_funcs.h" "tbl_vars.h" "undo.c" "variables.c" "window.c" "term_minibuf.c" "term_redisplay.c" "term_ncurses.c" "zile.h")) nil [1227 1925])
+            ("zile_LDADD" variable (:default-value ("$(regex)" "@LIBOBJS@")) nil [1926 1958])
+            ("EXTRA_DIST" variable (:default-value ("regex.c" "regex.h" "vasprintf.c" "strrstr.c" "getopt.h")) nil [1959 2019])
+            ("loc" function nil nil [2020 2052]))          
+      :file "Makefile.am"
+      :pointmax 2052
+      :fsize 2051
+      :lastmodtime '(18451 17662 0 0)
+      :unmatched-syntax '((shell-command 2026 . 2051) (bol 2025 . 2025)))
+    (semanticdb-table "getopt.h"
+      :file "getopt.h"
+      :fsize 4953
+      :lastmodtime '(18420 4440 0 0))
+    (semanticdb-table "zile.h"
+      :file "zile.h"
+      :fsize 11020
+      :lastmodtime '(18450 11436 0 0))
+    (semanticdb-table "extern.h"
+      :file "extern.h"
+      :fsize 11321
+      :lastmodtime '(18451 16972 0 0))
+    (semanticdb-table "eval.h"
+      :file "eval.h"
+      :fsize 1352
+      :lastmodtime '(18450 11435 0 0))
+    (semanticdb-table "vars.h"
+      :file "vars.h"
+      :fsize 1334
+      :lastmodtime '(18450 11436 0 0)))
+  :file "!home!qwn!Downloads!zile-2.2.58!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

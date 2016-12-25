@@ -1,0 +1,27 @@
+;; Object qwn/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "qwn/"
+  :tables
+  (list
+    (semanticdb-table "test.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [31 40])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [41 54]))                  
+                :type "int")
+                nil [22 120]))          
+      :file "test.cc"
+      :pointmax 122
+      :fsize 121
+      :lastmodtime '(22593 31999 872664 869000)
+      :unmatched-syntax nil))
+  :file "!home!qwn!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

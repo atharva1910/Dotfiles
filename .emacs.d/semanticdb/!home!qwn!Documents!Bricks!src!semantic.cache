@@ -1,0 +1,211 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "main.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("../include/RenderFunctions.hpp" include nil nil [1 42])
+            ("iostream" include (:system-flag t) nil [43 62])
+            ("main" function (:type "int") nil [64 1194]))          
+      :file "main.cc"
+      :pointmax 1197
+      :fsize 1196
+      :lastmodtime '(22596 14743 311019 629000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Ball.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("../include/Ball.hpp" include nil nil [1 31])
+            ("setOrign" function
+               (:parent "Ball"
+                :type "void")
+                nil [34 173])
+            ("update" function
+               (:parent "Ball"
+                :type "bool")
+                nil [176 540])
+            ("setPos" function
+               (:parent "Ball"
+                :type "void")
+                nil [542 605])
+            ("setVel" function
+               (:parent "Ball"
+                :type "void")
+                nil [609 674])
+            ("top" function
+               (:parent "Ball"
+                :type "float")
+                nil [677 756])
+            ("bottom" function
+               (:parent "Ball"
+                :type "float")
+                nil [758 836])
+            ("left" function
+               (:parent "Ball"
+                :type "float")
+                nil [838 914])
+            ("right" function
+               (:parent "Ball"
+                :type "float")
+                nil [916 993]))          
+      :file "Ball.cc"
+      :pointmax 997
+      :fsize 996
+      :lastmodtime '(22596 12760 956216 332000)
+      :unmatched-syntax nil)
+    (semanticdb-table "RenderFunctions.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("../include/RenderFunctions.hpp" include nil nil [1 42])
+            ("quitScreen" function
+               (:arguments 
+                  ( ("window" variable
+                       (:reference 1
+                        :type ("sf::RenderWindow" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60 85]))                  
+                :type "void")
+                nil [44 451])
+            ("waitForKey" function
+               (:arguments 
+                  ( ("window" variable
+                       (:reference 1
+                        :type ("sf::RenderWindow" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [469 494]))                  
+                :type "void")
+                nil [453 698])
+            ("initialize" function
+               (:arguments 
+                  ( ("ball" variable
+                       (:reference 1
+                        :type ("Ball" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [717 728])
+                    ("pad" variable
+                       (:reference 1
+                        :type ("Paddle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [728 740]))                  
+                :type "void")
+                nil [701 889])
+            ("isIntersecting" function
+               (:template 
+                  ( ("T1" type (:type "class") nil nil)
+                    ("T2" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("A" variable
+                       (:reference 1
+                        :type ("T1" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [940 946])
+                    ("B" variable
+                       (:reference 1
+                        :type ("T2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [947 953]))                  )
+                nil [892 1102])
+            ("ifCollision" function
+               (:arguments 
+                  ( ("ball" variable
+                       (:reference 1
+                        :type ("Ball" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1122 1133])
+                    ("paddle" variable
+                       (:reference 1
+                        :type ("Paddle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1133 1148]))                  
+                :type "void")
+                nil [1105 1373])
+            ("wallInit" function
+               (:arguments 
+                  ( ("wall" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Brick" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1390 1415]))                  
+                :type "void")
+                nil [1376 1724])
+            ("ifCollision" function
+               (:arguments 
+                  ( ("ball" variable
+                       (:reference 1
+                        :type ("Ball" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1744 1755])
+                    ("brick" variable
+                       (:reference 1
+                        :type ("Brick" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1755 1768]))                  
+                :type "void")
+                nil [1727 1941]))          
+      :file "RenderFunctions.cc"
+      :pointmax 1945
+      :fsize 1944
+      :lastmodtime '(22596 14616 632945 809000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Paddle.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("../include/Paddle.hpp" include nil nil [1 33])
+            ("iostream" include (:system-flag t) nil [34 53])
+            ("update" function
+               (:parent "Paddle"
+                :type "void")
+                nil [57 557])
+            ("setPos" function
+               (:parent "Paddle"
+                :type "void")
+                nil [560 687])
+            ("top" function
+               (:parent "Paddle"
+                :type "float")
+                nil [689 767])
+            ("left" function
+               (:parent "Paddle"
+                :type "float")
+                nil [769 925])
+            ("right" function
+               (:parent "Paddle"
+                :type "float")
+                nil [927 1086])
+            ("bottom" function
+               (:parent "Paddle"
+                :type "float")
+                nil [1089 1167]))          
+      :file "Paddle.cc"
+      :pointmax 1168
+      :fsize 1167
+      :lastmodtime '(22596 14703 70318 485000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Brick.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("../include/Brick.hpp" include nil nil [1 32])
+            ("changeState" function
+               (:parent "Brick"
+                :type "void")
+                nil [34 85])
+            ("top" function
+               (:parent "Brick"
+                :type "float")
+                nil [87 160])
+            ("bottom" function
+               (:parent "Brick"
+                :type "float")
+                nil [162 238])
+            ("left" function
+               (:parent "Brick"
+                :type "float")
+                nil [240 313])
+            ("right" function
+               (:parent "Brick"
+                :type "float")
+                nil [315 389]))          
+      :file "Brick.cc"
+      :pointmax 390
+      :fsize 389
+      :lastmodtime '(22594 63781 944312 931000)
+      :unmatched-syntax nil))
+  :file "!home!qwn!Documents!Bricks!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

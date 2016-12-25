@@ -1,0 +1,231 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "server.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("server.h" include nil nil [1 20])
+            ("nickUpdate" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [22 46])
+            ("userUpdate" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [47 71])
+            ("serverConnect" function
+               (:arguments 
+                  ( ("port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [92 103]))                  
+                :type "void")
+                nil [73 1978])
+            ("parseStr" function
+               (:arguments 
+                  ( ("string" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1995 2008]))                  
+                :type "int")
+                nil [1982 2442])
+            ("replyServer" function
+               (:arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2461 2467]))                  
+                :type "void")
+                nil [2444 2634]))          
+      :file "server.c"
+      :pointmax 2635
+      :fsize 2634
+      :lastmodtime '(22613 17625 639012 276000)
+      :unmatched-syntax nil)
+    (semanticdb-table "server.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("SERVER_H_" variable (:constant-flag t) nil [27 36])
+            ("reply.h" include nil nil [38 56])
+            ("sys/types.h" include (:system-flag t) nil [57 79])
+            ("sys/socket.h" include (:system-flag t) nil [80 103])
+            ("netinet/in.h" include (:system-flag t) nil [104 127])
+            ("string.h" include (:system-flag t) nil [128 147])
+            ("stdio.h" include (:system-flag t) nil [148 166])
+            ("netdb.h" include (:system-flag t) nil [167 185])
+            ("stdlib.h" include (:system-flag t) nil [186 205])
+            ("unistd.h" include (:system-flag t) nil [206 225])
+            ("serverConnect" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [283 290]))                  
+                :type "void")
+                nil [264 291])
+            ("replyServer" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [310 314]))                  
+                :type "void")
+                nil [293 315])
+            ("parseStr" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [330 337]))                  
+                :type "int")
+                nil [317 338]))          
+      :file "server.h"
+      :pointmax 347
+      :fsize 346
+      :lastmodtime '(22613 17339 537959 158000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SERVER_H_")
+          )
+)
+    (semanticdb-table "main.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [109 127])
+            ("stdlib.h" include (:system-flag t) nil [128 147])
+            ("unistd.h" include (:system-flag t) nil [148 167])
+            ("string.h" include (:system-flag t) nil [168 187])
+            ("log.h" include nil nil [189 205])
+            ("server.h" include nil nil [206 225])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [237 246])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [247 260]))                  
+                :type "int")
+                nil [228 1564]))          
+      :file "main.c"
+      :pointmax 1566
+      :fsize 1565
+      :lastmodtime '(22613 9702 548635 699000)
+      :unmatched-syntax nil)
+    (semanticdb-table "log.h"
+      :file "log.h"
+      :fsize 1209
+      :lastmodtime '(22612 6992 476498 530000))
+    (semanticdb-table "reply.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("REPLY_H_" variable (:constant-flag t) nil [69 77])
+            ("RPL_WELCOME" variable (:constant-flag t) nil [87 98])
+            ("RPL_YOURHOST" variable (:constant-flag t) nil [114 126])
+            ("RPL_CREATED" variable (:constant-flag t) nil [142 153])
+            ("RPL_MYINFO" variable (:constant-flag t) nil [169 179])
+            ("RPL_LUSERCLIENT" variable (:constant-flag t) nil [196 211])
+            ("RPL_LUSEROP" variable (:constant-flag t) nil [227 238])
+            ("RPL_LUSERUNKNOWN" variable (:constant-flag t) nil [255 271])
+            ("RPL_LUSERCHANNELS" variable (:constant-flag t) nil [286 303])
+            ("RPL_LUSERME" variable (:constant-flag t) nil [318 329])
+            ("RPL_AWAY" variable (:constant-flag t) nil [347 355])
+            ("RPL_UNAWAY" variable (:constant-flag t) nil [372 382])
+            ("RPL_NOWAWAY" variable (:constant-flag t) nil [406 417])
+            ("RPL_WHOISUSER" variable (:constant-flag t) nil [441 454])
+            ("RPL_WHOISSERVER" variable (:constant-flag t) nil [470 485])
+            ("RPL_WHOISOPERATOR" variable (:constant-flag t) nil [501 518])
+            ("RPL_WHOISIDLE" variable (:constant-flag t) nil [534 547])
+            ("RPL_ENDOFWHOIS" variable (:constant-flag t) nil [563 577])
+            ("RPL_WHOISCHANNELS" variable (:constant-flag t) nil [593 610])
+            ("RPL_WHOREPLY" variable (:constant-flag t) nil [627 639])
+            ("RPL_ENDOFWHO" variable (:constant-flag t) nil [655 667])
+            ("RPL_LIST" variable (:constant-flag t) nil [684 692])
+            ("RPL_LISTEND" variable (:constant-flag t) nil [709 720])
+            ("RPL_CHANNELMODEIS" variable (:constant-flag t) nil [738 755])
+            ("RPL_NOTOPIC" variable (:constant-flag t) nil [771 782])
+            ("RPL_TOPIC" variable (:constant-flag t) nil [799 808])
+            ("RPL_NAMREPLY" variable (:constant-flag t) nil [826 838])
+            ("RPL_ENDOFNAMES" variable (:constant-flag t) nil [854 868])
+            ("RPL_MOTDSTART" variable (:constant-flag t) nil [885 898])
+            ("RPL_MOTD" variable (:constant-flag t) nil [914 922])
+            ("RPL_ENDOFMOTD" variable (:constant-flag t) nil [939 952])
+            ("RPL_YOUREOPER" variable (:constant-flag t) nil [969 982])
+            ("ERR_NOSUCHNICK" variable (:constant-flag t) nil [999 1013])
+            ("ERR_NOSUCHCHANNEL" variable (:constant-flag t) nil [1030 1047])
+            ("ERR_CANNOTSENDTOCHAN" variable (:constant-flag t) nil [1063 1083])
+            ("ERR_UNKNOWNCOMMAND" variable (:constant-flag t) nil [1098 1116])
+            ("ERR_NOMOTD" variable (:constant-flag t) nil [1132 1142])
+            ("ERR_NONICKNAMEGIVEN" variable (:constant-flag t) nil [1170 1189])
+            ("ERR_NICKNAMEINUSE" variable (:constant-flag t) nil [1205 1222])
+            ("ERR_USERNOTINCHANNEL" variable (:constant-flag t) nil [1238 1258])
+            ("ERR_NOTONCHANNEL" variable (:constant-flag t) nil [1273 1289])
+            ("ERR_NOTREGISTERED" variable (:constant-flag t) nil [1305 1322])
+            ("ERR_NEEDMOREPARAMS" variable (:constant-flag t) nil [1338 1356])
+            ("ERR_ALREADYREGISTRED" variable (:constant-flag t) nil [1376 1396])
+            ("ERR_PASSWDMISMATCH" variable (:constant-flag t) nil [1411 1429])
+            ("ERR_UNKNOWNMODE" variable (:constant-flag t) nil [1449 1464])
+            ("ERR_CHANOPRIVSNEEDED" variable (:constant-flag t) nil [1481 1501])
+            ("ERR_UMODEUNKNOWNFLAG" variable (:constant-flag t) nil [1516 1536])
+            ("ERR_USERSDONTMATCH" variable (:constant-flag t) nil [1551 1569]))          
+      :file "reply.h"
+      :pointmax 1600
+      :fsize 1599
+      :lastmodtime '(22612 6992 476498 530000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ERR_NEEDMOREPARAMS" . ((string "\"461\"" 1362 . 1367)))
+          ("ERR_USERSDONTMATCH" . ((string "\"502\"" 1571 . 1576)))
+          ("RPL_YOURHOST" . ((string "\"002\"" 128 . 133)))
+          ("ERR_NOSUCHNICK" . ((string "\"401\"" 1016 . 1021)))
+          ("RPL_WHOREPLY" . ((string "\"352\"" 641 . 646)))
+          ("RPL_NOTOPIC" . ((string "\"331\"" 785 . 790)))
+          ("RPL_NAMREPLY" . ((string "\"353\"" 840 . 845)))
+          ("ERR_UNKNOWNCOMMAND" . ((string "\"421\"" 1118 . 1123)))
+          ("ERR_NICKNAMEINUSE" . ((string "\"433\"" 1224 . 1229)))
+          ("ERR_PASSWDMISMATCH" . ((string "\"464\"" 1435 . 1440)))
+          ("RPL_MYINFO" . ((string "\"004\"" 181 . 186)))
+          ("ERR_UNKNOWNMODE" . ((string "\"472\"" 1467 . 1472)))
+          ("RPL_YOUREOPER" . ((string "\"381\"" 984 . 989)))
+          ("ERR_ALREADYREGISTRED" . ((string "\"462\"" 1397 . 1402)))
+          ("RPL_LUSERCLIENT" . ((string "\"251\"" 213 . 218)))
+          ("RPL_WHOISUSER" . ((string "\"311\"" 456 . 461)))
+          ("RPL_ENDOFWHO" . ((string "\"315\"" 669 . 674)))
+          ("ERR_CHANOPRIVSNEEDED" . ((string "\"482\"" 1502 . 1507)))
+          ("RPL_UNAWAY" . ((string "\"305\"" 392 . 397)))
+          ("RPL_NOWAWAY" . ((string "\"306\"" 426 . 431)))
+          ("RPL_WELCOME" . ((string "\"001\"" 100 . 105)))
+          ("ERR_NONICKNAMEGIVEN" . ((string "\"431\"" 1191 . 1196)))
+          ("RPL_LUSERME" . ((string "\"255\"" 332 . 337)))
+          ("RPL_LIST" . ((string "\"322\"" 695 . 700)))
+          ("RPL_LISTEND" . ((string "\"323\"" 723 . 728)))
+          ("RPL_MOTDSTART" . ((string "\"375\"" 900 . 905)))
+          ("RPL_ENDOFMOTD" . ((string "\"376\"" 954 . 959)))
+          ("REPLY_H_")
+          ("RPL_LUSERUNKNOWN" . ((string "\"253\"" 272 . 277)))
+          ("RPL_AWAY" . ((string "\"301\"" 358 . 363)))
+          ("RPL_WHOISIDLE" . ((string "\"317\"" 549 . 554)))
+          ("RPL_ENDOFWHOIS" . ((string "\"318\"" 579 . 584)))
+          ("RPL_TOPIC" . ((string "\"332\"" 811 . 816)))
+          ("ERR_NOSUCHCHANNEL" . ((string "\"403\"" 1049 . 1054)))
+          ("ERR_CANNOTSENDTOCHAN" . ((string "\"404\"" 1084 . 1089)))
+          ("RPL_CREATED" . ((string "\"003\"" 155 . 160)))
+          ("RPL_WHOISCHANNELS" . ((string "\"319\"" 612 . 617)))
+          ("RPL_CHANNELMODEIS" . ((string "\"324\"" 756 . 761)))
+          ("RPL_ENDOFNAMES" . ((string "\"366\"" 870 . 875)))
+          ("ERR_NOMOTD" . ((string "\"422\"" 1156 . 1161)))
+          ("ERR_USERNOTINCHANNEL" . ((string "\"441\"" 1259 . 1264)))
+          ("ERR_NOTREGISTERED" . ((string "\"451\"" 1324 . 1329)))
+          ("RPL_LUSERCHANNELS" . ((string "\"254\"" 304 . 309)))
+          ("RPL_WHOISSERVER" . ((string "\"312\"" 487 . 492)))
+          ("RPL_WHOISOPERATOR" . ((string "\"313\"" 520 . 525)))
+          ("RPL_MOTD" . ((string "\"372\"" 925 . 930)))
+          ("ERR_NOTONCHANNEL" . ((string "\"442\"" 1291 . 1296)))
+          ("RPL_LUSEROP" . ((string "\"252\"" 241 . 246)))
+          ("ERR_UMODEUNKNOWNFLAG" . ((string "\"501\"" 1537 . 1542)))
+          )
+))
+  :file "!home!qwn!Documents!chirc!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,303 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables
+  (list
+    (semanticdb-table "RenderFunctions.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RFUN_HPP_" variable (:constant-flag t) nil [27 36])
+            ("Ball.hpp" include nil nil [38 57])
+            ("Paddle.hpp" include nil nil [58 79])
+            ("Brick.hpp" include nil nil [80 100])
+            ("initialize" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Ball" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [141 148])
+                    ("" variable
+                       (:reference 1
+                        :type ("Paddle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [148 157]))                  
+                :type "void")
+                nil [125 158])
+            ("quitScreen" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("sf::RenderWindow" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [194 212]))                  
+                :type "void")
+                nil [178 213])
+            ("waitForKey" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("sf::RenderWindow" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [276 294]))                  
+                :type "void")
+                nil [260 295])
+            ("isIntersecting" function
+               (:template 
+                  ( ("T1" type (:type "class") nil nil)
+                    ("T2" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("A" variable
+                       (:reference 1
+                        :type ("T1" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [394 400])
+                    ("B" variable
+                       (:reference 1
+                        :type ("T2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [401 407]))                  
+                :prototype-flag t)
+                nil [346 408])
+            ("ifCollision" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Ball" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [489 496])
+                    ("" variable
+                       (:reference 1
+                        :type ("Paddle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [496 505]))                  
+                :type "void")
+                nil [472 506])
+            ("ifCollision" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Ball" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [601 608])
+                    ("" variable
+                       (:reference 1
+                        :type ("Brick" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [609 617]))                  
+                :type "void")
+                nil [584 618])
+            ("wallInit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Brick" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [656 676]))                  
+                :type "void")
+                nil [642 677]))          
+      :file "RenderFunctions.hpp"
+      :pointmax 686
+      :fsize 685
+      :lastmodtime '(22596 14584 140482 16000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("RFUN_HPP_")
+          )
+)
+    (semanticdb-table "Ball.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BALL_HPP_" variable (:constant-flag t) nil [27 36])
+            ("SFML/Window.hpp" include (:system-flag t) nil [37 63])
+            ("SFML/Graphics.hpp" include (:system-flag t) nil [64 92])
+            ("Ball" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [137 145])
+                    ("height" variable (:type "int") (reparse-symbol classsubparts) [148 175])
+                    ("width" variable (:type "int") (reparse-symbol classsubparts) [148 175])
+                    ("vel" variable (:type "float") (reparse-symbol classsubparts) [178 193])
+                    ("public" label nil (reparse-symbol classsubparts) [195 202])
+                    ("circle" variable (:type ("sf::CircleShape" type (:type "class") nil nil)) (reparse-symbol classsubparts) [205 228])
+                    ("velocity" variable (:type ("sf::Vector2f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [250 283])
+                    ("Ball" function
+                       (:constructor-flag t
+                        :type ("Ball" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [312 440])
+                    ("setOrign" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [458 474])
+                    ("update" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [532 546])
+                    ("setPos" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [567 581])
+                    ("setVel" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [604 618])
+                    ("top" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [703 715])
+                    ("bottom" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [718 733])
+                    ("left" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [736 749])
+                    ("right" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [752 766]))                  
+                :type "class")
+                nil [124 769]))          
+      :file "Ball.hpp"
+      :pointmax 778
+      :fsize 777
+      :lastmodtime '(22596 13670 983847 572000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BALL_HPP_")
+          )
+)
+    (semanticdb-table "Paddle.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PADDLE_HPP_" variable (:constant-flag t) nil [29 40])
+            ("SFML/Window.hpp" include (:system-flag t) nil [41 67])
+            ("SFML/Graphics.hpp" include (:system-flag t) nil [68 96])
+            ("Paddle" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [114 122])
+                    ("rightLimit" variable (:type "int") (reparse-symbol classsubparts) [125 158])
+                    ("leftLimit" variable (:type "int") (reparse-symbol classsubparts) [125 158])
+                    ("paddleWidth" variable (:type "float") (reparse-symbol classsubparts) [161 204])
+                    ("paddleHeight" variable (:type "float") (reparse-symbol classsubparts) [161 204])
+                    ("paddleVel" variable (:type "float") (reparse-symbol classsubparts) [249 270])
+                    ("public" label nil (reparse-symbol classsubparts) [296 303])
+                    ("paddle" variable (:type ("sf::RectangleShape" type (:type "class") nil nil)) (reparse-symbol classsubparts) [306 332])
+                    ("velocity" variable (:type ("sf::Vector2f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [335 358])
+                    ("Paddle" function
+                       (:constructor-flag t
+                        :type ("Paddle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [361 551])
+                    ("update" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [569 583])
+                    ("setPos" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [627 641])
+                    ("top" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [756 768])
+                    ("left" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [771 784])
+                    ("right" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [787 801])
+                    ("bottom" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [804 819]))                  
+                :type "class")
+                nil [99 822]))          
+      :file "Paddle.hpp"
+      :pointmax 831
+      :fsize 830
+      :lastmodtime '(22596 14444 402872 887000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PADDLE_HPP_")
+          )
+)
+    (semanticdb-table "Brick.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BRICKS_HPP_" variable (:constant-flag t) nil [29 40])
+            ("BRICKS_HPP_" variable (:constant-flag t) nil [29 40])
+            ("SFML/Window.hpp" include (:system-flag t) nil [41 67])
+            ("SFML/Graphics.hpp" include (:system-flag t) nil [68 96])
+            ("vector" include (:system-flag t) nil [97 114])
+            ("Brick" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [130 138])
+                    ("brickWidth" variable (:type "float") (reparse-symbol classsubparts) [141 182])
+                    ("brickHeight" variable (:type "float") (reparse-symbol classsubparts) [141 182])
+                    ("public" label nil (reparse-symbol classsubparts) [186 193])
+                    ("isDestroyed" variable (:type "bool") (reparse-symbol classsubparts) [196 220])
+                    ("brick" variable (:type ("sf::RectangleShape" type (:type "class") nil nil)) (reparse-symbol classsubparts) [223 248])
+                    ("Brick" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("m_x" variable (:type "float") (reparse-symbol arg-sub-list) [257 267])
+                            ("m_y" variable (:type "float") (reparse-symbol arg-sub-list) [267 277]))                          
+                        :type ("Brick" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [251 544])
+                    ("wallColumns" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [566 584])
+                    ("wallRows" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [587 602])
+                    ("wallInit" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Brick" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [619 640]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [605 641])
+                    ("changeState" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [644 663])
+                    ("top" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [692 704])
+                    ("bottom" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [707 722])
+                    ("left" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [725 738])
+                    ("right" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [741 755]))                  
+                :type "class")
+                nil [116 759]))          
+      :file "Brick.hpp"
+      :pointmax 770
+      :fsize 769
+      :lastmodtime '(22594 58830 473919 319000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BRICKS_HPP_")
+          )
+))
+  :file "!home!qwn!Documents!Bricks!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
