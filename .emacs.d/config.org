@@ -1,0 +1,50 @@
+* init.el sources the file for emacs configration
+  
+* Evil mode
+** I think the emacs keybindings are very weird and I much prefer the vim modal style editing.
+** Use evil mode for vim keybindings in emacs
+    #+BEGIN_SRC emacs-lisp
+	(require 'evil)
+	(evil-mode 1)
+    #+END_SRC
+** Enable line numbers mode, easier to jump to lines
+   #+BEGIN_SRC emacs-lisp
+   (global-display-line-numbers-mode)
+   #+END_SRC
+
+* Emacs
+** All the configrations regarding the default behaviour of emacs are changed here
+** Disable scroll bar, tool bar and menu bar
+    #+BEGIN_SRC emacs-lisp
+    (scroll-bar-mode -1)
+    (menu-bar-mode -1)
+    (tool-bar-mode -1)
+    #+END_SRC
+** Do not make bakup files
+    #+BEGIN_SRC emacs-lisp
+      (setq make-backup-files nil)
+    #+END_SRC
+
+** Use spaces insted of filthy tabs
+    #+BEGIN_SRC emacs-lisp
+      (setq-default indent-tabs-mode nil)
+      (setq-default tab-width 4)
+    #+END_SRC
+** Do not show startup screen
+   #+BEGIN_SRC emacs-lisp
+     (setq inhibit-startup-screen t)
+   #+END_SRC
+* ORG mode 
+** Org bullets, looks better than the "*"
+    #+BEGIN_SRC emacs-lisp
+    (require 'org-bullets)
+    (add-hook 'org-mode-hook (lambda () (org-bullets-mode)))
+    #+END_SRC
+* IDO mode
+** Faster completion, findings
+    #+BEGIN_SRC emacs-lisp
+      (setq ido-enable-flex-matching t)
+      (setq ido-everywhere t)
+      (ido-mode 1)
+      (ido-ubiquitous-mode 1)
+    #+END_SRC
