@@ -1,0 +1,87 @@
+* init.el sources the file for emacs configration
+  
+* Evil mode
+** I think the emacs keybindings are very weird and I much prefer the vim modal style editing.
+** Use evil mode for vim keybindings in emacs
+   #+BEGIN_SRC emacs-lisp
+   (require 'evil)
+   (evil-mode 1)
+   #+END_SRC
+** Enable line numbers mode, easier to jump to lines
+   #+BEGIN_SRC emacs-lisp
+   (global-display-line-numbers-mode)
+   #+END_SRC
+** Map keys for evil to use ido mode
+*** Find file (replace ":e ")
+    #+BEGIN_SRC emacs-lisp
+    (define-key evil-ex-map "e " 'ido-find-file)
+    #+END_SRC
+*** Switch buffer (replace ": b ")
+    #+BEGIN_SRC emacs-lisp
+    (define-key evil-ex-map "b " 'ido-switch-buffer)
+    #+END_SRC
+** Define keys for avy mode
+   #+BEGIN_SRC emacs-lisp
+     (global-set-key (kbd "M-s") 'evil-avy-goto-char)
+     (global-set-key (kbd "M-t") 'evil-avy-goto-char-timer)
+   #+END_SRC
+* Emacs
+** All the configrations regarding the default behaviour of emacs are changed here
+** Disable scroll bar, tool bar and menu bar
+    #+BEGIN_SRC emacs-lisp
+    (scroll-bar-mode -1)
+    (menu-bar-mode -1)
+    (tool-bar-mode -1)
+    #+END_SRC
+** Do not make bakup files
+    #+BEGIN_SRC emacs-lisp
+      (setq make-backup-files nil)
+    #+END_SRC
+** Use spaces insted of filthy tabs
+    #+BEGIN_SRC emacs-lisp
+      (setq-default indent-tabs-mode nil)
+      (setq-default tab-width 4)
+    #+END_SRC
+** Do not show startup screen
+   #+BEGIN_SRC emacs-lisp
+     (setq inhibit-startup-screen t)
+   #+END_SRC
+** Highlight the current line   
+   #+BEGIN_SRC emacs-lisp
+   (global-hl-line-mode 1)
+   #+END_SRC
+** electricmode (*noremap in vim)
+   #+BEGIN_SRC emacs-lisp
+     (setq electric-pair-pairs '(
+                                 (?\( . ?\))
+                                 (?\[ . ?\])
+                                 (?\" . ?\")
+                                 (?\{ . ?\})))
+     (electric-pair-mode t)
+   #+END_SRC
+* ORG mode 
+** Org bullets, looks better than the "*"
+    #+BEGIN_SRC emacs-lisp
+    (require 'org-bullets)
+    (add-hook 'org-mode-hook (lambda () (org-bullets-mode)))
+    #+END_SRC
+* IDO mode
+** Faster completion, findings
+   #+BEGIN_SRC emacs-lisp
+   (setq ido-enable-flex-matching t)
+   (setq ido-everywhere t)
+   (ido-mode 1)
+   (ido-ubiquitous-mode 1)
+   #+END_SRC
+** Ido vertical mode
+   #+BEGIN_SRC emacs-lisp
+   (when (require 'ido-vertical-mode nil 'noerror)
+     (ido-vertical-mode 1))
+   (setq ido-vertical-define-keys 'C-n-and-C-p-only)
+   (setq ido-vertical-show-count t)
+   #+END_SRC
+* Beacon
+** Highlight cursor line after switching
+    #+BEGIN_SRC emacs-lisp
+    (beacon-mode 1)
+    #+END_SRC
