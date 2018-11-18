@@ -3,14 +3,23 @@
 * Evil mode
 ** I think the emacs keybindings are very weird and I much prefer the vim modal style editing.
 ** Use evil mode for vim keybindings in emacs
-    #+BEGIN_SRC emacs-lisp
-	(require 'evil)
-	(evil-mode 1)
-    #+END_SRC
+   #+BEGIN_SRC emacs-lisp
+   (require 'evil)
+   (evil-mode 1)
+   #+END_SRC
 ** Enable line numbers mode, easier to jump to lines
    #+BEGIN_SRC emacs-lisp
    (global-display-line-numbers-mode)
    #+END_SRC
+** Map keys for evil to use ido mode
+*** Find file (replace ":e ")
+    #+BEGIN_SRC emacs-lisp
+    (define-key evil-ex-map "e " 'ido-find-file)
+    #+END_SRC
+*** Switch buffer (replace ": b ")
+    #+BEGIN_SRC emacs-lisp
+    (define-key evil-ex-map "b " 'ido-switch-buffer)
+    #+END_SRC
 
 * Emacs
 ** All the configrations regarding the default behaviour of emacs are changed here
@@ -24,7 +33,6 @@
     #+BEGIN_SRC emacs-lisp
       (setq make-backup-files nil)
     #+END_SRC
-
 ** Use spaces insted of filthy tabs
     #+BEGIN_SRC emacs-lisp
       (setq-default indent-tabs-mode nil)
@@ -33,6 +41,10 @@
 ** Do not show startup screen
    #+BEGIN_SRC emacs-lisp
      (setq inhibit-startup-screen t)
+   #+END_SRC
+** Highlight the current line   
+   #+BEGIN_SRC emacs-lisp
+   (global-hl-line-mode 1)
    #+END_SRC
 * ORG mode 
 ** Org bullets, looks better than the "*"
@@ -47,4 +59,9 @@
       (setq ido-everywhere t)
       (ido-mode 1)
       (ido-ubiquitous-mode 1)
+    #+END_SRC
+* Beacon
+** Highlight cursor line after switching
+    #+BEGIN_SRC emacs-lisp
+    (beacon-mode 1)
     #+END_SRC
