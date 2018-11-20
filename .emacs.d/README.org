@@ -1,7 +1,6 @@
 * init.el sources the file for emacs configration
   
 * Evil mode
-** I think the emacs keybindings are very weird and I much prefer the vim modal style editing.
 ** Use evil mode for vim keybindings in emacs
    #+BEGIN_SRC emacs-lisp
    (require 'evil)
@@ -85,3 +84,12 @@
     #+BEGIN_SRC emacs-lisp
     (beacon-mode 1)
     #+END_SRC
+* Journaling
+** Load diary funtion
+   #+BEGIN_SRC emacs-lisp
+     (defun load-diary()
+       (interactive)
+       (find-file "~/Documents/.Diary.org"))
+
+     (global-set-key (kbd "C-c d") 'load-diary)
+   #+END_SRC
