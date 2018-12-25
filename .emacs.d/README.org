@@ -1,7 +1,7 @@
 * init.el sources the file for emacs configration
   
 * Evil mode
-** COMMENT Use evil mode for vim keybindings in emacs
+** Use evil mode for vim keybindings in emacs
    #+BEGIN_SRC emacs-lisp
      (use-package evil
        :ensure t
