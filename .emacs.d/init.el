@@ -23,7 +23,7 @@
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(package-selected-packages
    (quote
-    (avy ido-vertical-mode which-key beacon ido-completing-read+ org-bullets doom-themes spacemacs-theme evil)))
+    (golden-ratio beacon-mode ido-ubiquitous-mode avy ido-vertical-mode which-key beacon ido-completing-read+ org-bullets doom-themes spacemacs-theme evil)))
  '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#292b2e"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

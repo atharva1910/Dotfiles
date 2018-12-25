@@ -1,28 +1,17 @@
 * init.el sources the file for emacs configration
   
 * Evil mode
-** Use evil mode for vim keybindings in emacs
+** COMMENT Use evil mode for vim keybindings in emacs
    #+BEGIN_SRC emacs-lisp
-   (require 'evil)
-   (evil-mode 1)
+     (use-package evil
+       :ensure t
+       :config
+         (require 'evil)
+         (evil-mode 1))
    #+END_SRC
 ** Enable line numbers mode, easier to jump to lines
    #+BEGIN_SRC emacs-lisp
-   (global-display-line-numbers-mode)
-   #+END_SRC
-** Map keys for evil to use ido mode
-*** Find file (replace ":e ")
-    #+BEGIN_SRC emacs-lisp
-    (define-key evil-ex-map "e " 'ido-find-file)
-    #+END_SRC
-*** Switch buffer (replace ": b ")
-    #+BEGIN_SRC emacs-lisp
-    (define-key evil-ex-map "b " 'ido-switch-buffer)
-    #+END_SRC
-** Define keys for avy mode
-   #+BEGIN_SRC emacs-lisp
-     (global-set-key (kbd "M-s") 'evil-avy-goto-char)
-     (global-set-key (kbd "M-t") 'evil-avy-goto-char-timer)
+;   (global-display-line-numbers-mode)
    #+END_SRC
 * Emacs
 ** All the configrations regarding the default behaviour of emacs are changed here
@@ -61,28 +50,50 @@
 * ORG mode 
 ** Org bullets, looks better than the "*"
     #+BEGIN_SRC emacs-lisp
-    (require 'org-bullets)
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode)))
+      (use-package org-bullets
+       :ensure t
+        :config
+      (require 'org-bullets)
+      (add-hook 'org-mode-hook (lambda () (org-bullets-mode))))
     #+END_SRC
 * IDO mode
 ** Faster completion, findings
    #+BEGIN_SRC emacs-lisp
-   (setq ido-enable-flex-matching t)
-   (setq ido-everywhere t)
-   (ido-mode 1)
-   (ido-ubiquitous-mode 1)
+     (setq ido-enable-flex-matching t)
+     (setq ido-everywhere t)
+     (ido-mode 1)
+     (use-package ido-completing-read+
+       :ensure t
+       :config
+     (ido-ubiquitous-mode 1))
    #+END_SRC
 ** Ido vertical mode
    #+BEGIN_SRC emacs-lisp
-   (when (require 'ido-vertical-mode nil 'noerror)
-     (ido-vertical-mode 1))
-   (setq ido-vertical-define-keys 'C-n-and-C-p-only)
-   (setq ido-vertical-show-count t)
+     (use-package ido-vertical-mode
+       :ensure t
+       :config
+     (require 'ido-vertical-mode)
+     (ido-vertical-mode 1)
+     (setq ido-vertical-define-keys 'C-n-and-C-p-only)
+     (setq ido-vertical-show-count t))
    #+END_SRC
+** Map keys for evil to use ido mode
+*** Find file (replace ":e ")
+    #+BEGIN_SRC emacs-lisp
+    (define-key evil-ex-map "e " 'ido-find-file)
+    #+END_SRC
+*** Switch buffer (replace ": b ")
+    #+BEGIN_SRC emacs-lisp
+    (define-key evil-ex-map "b " 'ido-switch-buffer)
+    #+END_SRC
+
 * Beacon
 ** Highlight cursor line after switching
     #+BEGIN_SRC emacs-lisp
-    (beacon-mode 1)
+      (use-package beacon
+        :ensure t
+        :config
+        (beacon-mode 1))
     #+END_SRC
 * Journaling
 ** Load diary funtion
@@ -93,3 +104,32 @@
 
      (global-set-key (kbd "C-c d") 'load-diary)
    #+END_SRC
+* Avy mode
+** Define keys for avy mode
+   #+BEGIN_SRC emacs-lisp
+     (use-package avy
+       :ensure t
+       :config
+     (global-set-key (kbd "M-s") 'evil-avy-goto-char)
+     (global-set-key (kbd "M-t") 'evil-avy-goto-char-timer))
+   #+END_SRC
+* Golden Ratio
+#+BEGIN_SRC emacs-lisp
+  (use-package golden-ratio
+    :ensure t
+    :config
+    (require 'golden-ratio)
+    (golden-ratio-mode 1)
+    (setq golden-ratio-extra-commands
+        (append golden-ratio-extra-commands
+                '(evil-window-left
+                  evil-window-right
+                  evil-window-up
+                  evil-window-down
+                  select-window-1
+                  select-window-2
+                  select-window-3
+                  select-window-4
+                  select-window-5))))
+
+#+END_SRC
