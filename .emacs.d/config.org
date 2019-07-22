@@ -29,6 +29,8 @@
     #+BEGIN_SRC emacs-lisp
       (setq-default indent-tabs-mode nil)
       (setq-default tab-width 4)
+      (setq-default c-basic-offset 4)
+
     #+END_SRC
 ** Do not show startup screen
    #+BEGIN_SRC emacs-lisp
@@ -36,7 +38,7 @@
    #+END_SRC
 ** Highlight the current line   
    #+BEGIN_SRC emacs-lisp
-   (global-hl-line-mode 1)
+   (global-hl-line-mode 0)
    #+END_SRC
 ** electricmode (*noremap in vim)
    #+BEGIN_SRC emacs-lisp
@@ -115,21 +117,78 @@
    #+END_SRC
 * Golden Ratio
 #+BEGIN_SRC emacs-lisp
-  (use-package golden-ratio
+;;  (use-package golden-ratio
+;;    :ensure t
+;;    :config
+;;    (require 'golden-ratio)
+;;    (golden-ratio-mode 1)
+;;    (setq golden-ratio-extra-commands
+;;        (append golden-ratio-extra-commands
+;;                '(evil-window-left
+;;                  evil-window-right
+;;                  evil-window-up
+;;                  evil-window-down
+;;                  select-window-1
+;;                  select-window-2
+;;                  select-window-3
+;;                  select-window-4
+;;                  select-window-5))))
+
+#+END_SRC
+* Automcompelete
+#+BEGIN_SRC emacs-lisp
+  (use-package auto-complete
     :ensure t
     :config
-    (require 'golden-ratio)
-    (golden-ratio-mode 1)
-    (setq golden-ratio-extra-commands
-        (append golden-ratio-extra-commands
-                '(evil-window-left
-                  evil-window-right
-                  evil-window-up
-                  evil-window-down
-                  select-window-1
-                  select-window-2
-                  select-window-3
-                  select-window-4
-                  select-window-5))))
+    (ac-config-default))
+#+END_SRC
+* Personal
+#+BEGIN_SRC emacs-lisp
+  (require 'subr-x)
+  (defun insert-fun-doc()
+    (interactive)
+    (setq fun-name (thing-at-point 'word 'no-properties)) ; Save the function name
+    (setq fun (thing-at-point 'line 'no-properties))      ; Save the function defination line
+    (save-excursion                                       ; Revert to the cursor location after insert
+      (forward-line -1)                                   ; Go 2 lines up
+      (end-of-line)                                       ; Go to end of line
+      (open-line 1)                                       ; Insert new line below
+      (insert (format
+  "/*
+  %s
+  Description:
+
+  Arguments: 
+    %s
+  ,*/" fun-name (get-arg-list fun)))
+      (forward-line 1)                                    ; Move one line down
+      (kill-whole-line)                                   ; Delete the extra line
+    )
+  )
+
+  (defun format-arg-list(arg-line)
+    ; Recursively split at "," and add to the list arg-list
+    (let ((format-arg-str (lambda (arg-string)
+                            (when arg-string
+                              (when (string-match "," arg-string)
+                                (funcall format-arg-str (substring arg-string (+ 1 (string-match "," arg-string)) nil)))
+                              (unless (string= "" arg-string)
+                                (push (string-trim-left
+                                       (substring arg-string 0 (if (string-match "," arg-string) (string-match "," arg-string) nil)))
+                                      arg-list)))))
+          (arg-list '()))
+    (funcall format-arg-str arg-line)))
+
+  (defun get-arg-list(fun-line)
+    ; save the splitted argument list
+    (let ((arg-list (format-arg-list (substring fun-line
+                                                (+ (string-match "(" fun-line) 1)
+                                                (string-match ")" fun-line)))))
+      ; format the argument list
+      (if arg-list
+          (mapconcat 'identity arg-list "\n  ")
+        "None")))
+
+  (global-set-key (kbd "C-c f") 'insert-fun-doc)
 
 #+END_SRC
