@@ -1,18 +1,4 @@
 * init.el sources the file for emacs configration
-  
-* Evil mode
-** Use evil mode for vim keybindings in emacs
-   #+BEGIN_SRC emacs-lisp
-     (use-package evil
-       :ensure t
-       :config
-         (require 'evil)
-         (evil-mode 1))
-   #+END_SRC
-** Enable line numbers mode, easier to jump to lines
-   #+BEGIN_SRC emacs-lisp
-;   (global-display-line-numbers-mode)
-   #+END_SRC
 * Emacs
 ** All the configrations regarding the default behaviour of emacs are changed here
 ** Disable scroll bar, tool bar and menu bar
@@ -49,6 +35,11 @@
                                  (?\{ . ?\})))
      (electric-pair-mode t)
    #+END_SRC
+** Themes
+   #+begin_src emacs-lisp
+     (use-package doom-themes
+       :ensure t)
+   #+end_src
 * ORG mode 
 ** Org bullets, looks better than the "*"
     #+BEGIN_SRC emacs-lisp
@@ -79,16 +70,6 @@
      (setq ido-vertical-define-keys 'C-n-and-C-p-only)
      (setq ido-vertical-show-count t))
    #+END_SRC
-** Map keys for evil to use ido mode
-*** Find file (replace ":e ")
-    #+BEGIN_SRC emacs-lisp
-    (define-key evil-ex-map "e " 'ido-find-file)
-    #+END_SRC
-*** Switch buffer (replace ": b ")
-    #+BEGIN_SRC emacs-lisp
-    (define-key evil-ex-map "b " 'ido-switch-buffer)
-    #+END_SRC
-
 * Beacon
 ** Highlight cursor line after switching
     #+BEGIN_SRC emacs-lisp
@@ -115,26 +96,6 @@
      (global-set-key (kbd "M-s") 'evil-avy-goto-char)
      (global-set-key (kbd "M-t") 'evil-avy-goto-char-timer))
    #+END_SRC
-* Golden Ratio
-#+BEGIN_SRC emacs-lisp
-;;  (use-package golden-ratio
-;;    :ensure t
-;;    :config
-;;    (require 'golden-ratio)
-;;    (golden-ratio-mode 1)
-;;    (setq golden-ratio-extra-commands
-;;        (append golden-ratio-extra-commands
-;;                '(evil-window-left
-;;                  evil-window-right
-;;                  evil-window-up
-;;                  evil-window-down
-;;                  select-window-1
-;;                  select-window-2
-;;                  select-window-3
-;;                  select-window-4
-;;                  select-window-5))))
-
-#+END_SRC
 * Automcompelete
 #+BEGIN_SRC emacs-lisp
   (use-package auto-complete
@@ -200,4 +161,4 @@
   (global-set-key (kbd "C-c f") 'insert-fun-doc)
 
 #+END_SRC
-
+* 

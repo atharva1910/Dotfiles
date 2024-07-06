@@ -19,18 +19,16 @@
    ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
  '(custom-enabled-themes nil)
  '(custom-safe-themes
-   (quote
-    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+   '("8c7e832be864674c220f9a9361c851917a93f921fedb7717b1b5ece47690c098" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default))
  '(package-selected-packages
-   (quote
-    (golden-ratio beacon-mode ido-ubiquitous-mode avy ido-vertical-mode which-key beacon ido-completing-read+ org-bullets doom-themes spacemacs-theme evil)))
- '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#292b2e"))))
+   '(yasnippet auto-complete golden-ratio beacon-mode ido-ubiquitous-mode avy ido-vertical-mode which-key beacon ido-completing-read+ org-bullets doom-themes spacemacs-theme evil))
+ '(pdf-view-midnight-colors '("#b2b2b2" . "#292b2e")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "White" :foreground "Black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "1ASC" :family "Liberation Mono")))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 113 :width normal :foundry "ADBO" :family "Source Code Pro")))))
 
 ;;; Custom will move to org file?
 (org-babel-load-file (expand-file-name "~/.emacs.d/config.org"))
